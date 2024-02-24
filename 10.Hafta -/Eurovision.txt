@@ -1,0 +1,9 @@
+c1=Turkey
+b1=Sezen_Aksu
+s1=Zalim
+c2=England
+b2=Fredie_Mercury
+s2=Bohamian_R.
+c3=İtaly
+b3=Andrea
+s3=La_Chantemi_Cantare

@@ -1,0 +1,2 @@
+a="saf"
+print(a)

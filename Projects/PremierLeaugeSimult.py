@@ -1,0 +1,202 @@
+#This Proect is a simultaneous soccer leauge proect.
+#file,try except
+
+from collections import OrderedDict
+import random
+team_dict={"Manchester_City":1260.00,"Arsenal":1100.00,"Chelsea":999.00,"FC_Liverpool":877.30,"Manchester_United":877.30,
+   "Tottenham_Hotspur":747.60,"Newcastle_United":650.50,"Aston_Villa":630.70,"West_Ham_United":470.85,
+    "Brighton_Hove_Albion":468.30,"Nottingham_Forest":395.58,"FC_Brentford":379.10,"Crystal_Palace":369.45,
+        "Everton":350.70,"AFC_Bournemouth":343.50,"Wolverhampton_Wanderers":320.48,"Fulham":304.00,
+            "Burnley":256.75,"Sheffield_United":154.95,"Luton_Town":87.20}
+
+def this_year_rank(last,worth,coach,fans,managment):
+    return last*5+worth*4+coach*3+fans*2+managment*1
+
+Manchester_City=["Manchester_City",1,team_dict["Manchester_City"],10,8,10,this_year_rank(1,team_dict["Manchester_City"],10,8,10),0,0,0,0,0,0,0]
+Arsenal=["Arsenal",2,team_dict["Arsenal"],9,9,9,this_year_rank(2,team_dict["Arsenal"],9,9,9),0,0,0,0,0,0,0]
+Chelsea=["Chelsea",12,team_dict["Chelsea"],9,8,7,this_year_rank(12,team_dict["Chelsea"],9,8,7),0,0,0,0,0,0,0]
+FC_Liverpool=["FC_Liverpool",5,team_dict["FC_Liverpool"],10,10,9,this_year_rank(5,team_dict["FC_Liverpool"],10,10,9),0,0,0,0,0,0,0]
+Manchester_United=["Manchester_United",3,team_dict["Manchester_United"],8,10,6,this_year_rank(3,team_dict["FC_Liverpool"],8,10,6),0,0,0,0,0,0,0]
+Tottenham_Hotspur=["Tottenham_Hotspur",8,team_dict["Tottenham_Hotspur"],8,9,10,this_year_rank(8,team_dict["Tottenham_Hotspur"],8,9,10),0,0,0,0,0,0,0]
+Newcastle_United=["Newcastle_United",4,team_dict["Newcastle_United"],8,8,10,this_year_rank(4,team_dict["Newcastle_United"],8,8,10),0,0,0,0,0,0,0]
+Aston_Villa=["Aston_Villa",7,team_dict["Aston_Villa"],8,8,9,this_year_rank(7,team_dict["Aston_Villa"],8,8,9),0,0,0,0,0,0,0]
+West_Ham_United=["West_Ham_United",14,team_dict["West_Ham_United"],7,8,8,this_year_rank(14,team_dict["West_Ham_United"],7,8,8),0,0,0,0,0,0,0]
+Brighton_Hove_Albion=["Brighton_Hove_Albion",6,team_dict["Brighton_Hove_Albion"],9,5,10,this_year_rank(6,team_dict["Brighton_Hove_Albion"],9,5,10),0,0,0,0,0,0,0]
+Nottingham_Forest=["Nottingham_Forest",16,team_dict["Nottingham_Forest"],5,7,5,this_year_rank(16,team_dict["Nottingham_Forest"],5,7,5),0,0,0,0,0,0,0]
+FC_Brentford=["FC_Brentford",9,team_dict["FC_Brentford"],5,5,7,this_year_rank(9,team_dict["FC_Brentford"],5,5,7),0,0,0,0,0,0,0]
+Crystal_Palace=["Crystal_Palace",11,team_dict["Crystal_Palace"],6,7,7,this_year_rank(11,team_dict["Crystal_Palace"],6,7,7),0,0,0,0,0,0,0]
+Everton=["Everton",17,team_dict["Everton"],6,8,5,this_year_rank(17,team_dict["Everton"],6,8,5),0,0,0,0,0,0,0]
+AFC_Bournemouth=["AFC_Bournemouth",15,team_dict["AFC_Bournemouth"],5,6,5,this_year_rank(15,team_dict["AFC_Bournemouth"],5,6,5),0,0,0,0,0,0,0]
+Wolverhampton_Wanderers=["Wolverhampton_Wanderers",13,team_dict["Wolverhampton_Wanderers"],6,6,7,this_year_rank(13,team_dict["Wolverhampton_Wanderers"],6,6,7),0,0,0,0,0,0,0]
+Fulham=["Fulham",10,team_dict["Fulham"],5,5,6,this_year_rank(10,team_dict["Fulham"],5,5,6),0,0,0,0,0,0,0]
+Burnley=["Burnley",21,team_dict["Burnley"],6,6,6,this_year_rank(21,team_dict["Burnley"],6,6,6),0,0,0,0,0,0,0]
+Sheffield_United=["Sheffield_United",22,team_dict["Sheffield_United"],5,7,5,this_year_rank(22,team_dict["Sheffield_United"],5,7,5),0,0,0,0,0,0,0]
+Luton_Town=["Luton_Town",23,team_dict["Luton_Town"],5,5,5,this_year_rank(23,team_dict["Luton_Town"],5,5,5),0,0,0,0,0,0,0]
+team_list=[Manchester_City,Arsenal,Chelsea,FC_Liverpool,Manchester_United,
+   Tottenham_Hotspur,Newcastle_United,Aston_Villa,West_Ham_United,
+    Brighton_Hove_Albion,Nottingham_Forest,FC_Brentford,Crystal_Palace,
+        Everton,AFC_Bournemouth,Wolverhampton_Wanderers,Fulham,
+            Burnley,Sheffield_United,Luton_Town]
+
+class PremierLeauge:
+    def __init__(self,team1,team2,team3,team4,team5,team6,team7,team8,team9,team10,
+                 team11,team12,team13,team14,team15,team16,team17,team18,team19,team20):
+        self.team1=team1
+        self.team2=team2
+        self.team3=team3
+        self.team4=team4
+        self.team5=team5
+        self.team6=team6
+        self.team7=team7
+        self.team8=team8
+        self.team9=team9
+        self.team10=team10
+        self.team11=team11
+        self.team12=team12
+        self.team13=team13
+        self.team14=team14
+        self.team15=team15
+        self.team16=team16
+        self.team17=team17
+        self.team18=team18
+        self.team19=team19
+        self.team20=team20
+        
+    def Match_of_two_teams(teamone,teamtwo):
+        if teamone[4]>=9 and teamone[4]<=10:
+            teamone_coach=random.uniform(1.5,2)*teamone[3]
+        elif teamone[4]>=8 and teamone[4]<9:
+            teamone_coach=random.uniform(1,1.5)*teamone[3]
+        elif teamone[4]>=7 and teamone[4]<8:
+            teamone_coach=random.uniform(0.5,1)*teamone[3]
+        elif teamone[4]<7:
+            teamone_coach=random.uniform(0,0.5)*teamone[3]
+        if teamtwo[4]>=9 and teamtwo[4]<=10:
+            teamtwo_coach=random.uniform(1.5,2)*teamtwo[3]
+        elif teamtwo[4]>=8 and teamtwo[4]<9:
+            teamtwo_coach=random.uniform(1,1.5)*teamtwo[3]
+        elif teamtwo[4]>=7 and teamtwo[4]<8:
+            teamtwo_coach=random.uniform(0.5,1)*teamtwo[3]
+        elif teamtwo[4]<7:
+            teamtwo_coach=random.uniform(0,0.5)*teamtwo[3]
+
+        if teamone_coach<=20 and teamone_coach>=15:
+            teamone_worth=random.uniform(1.5,2)*teamone[2]
+        elif teamone_coach<=15 and teamone_coach>=10:
+            teamone_worth=random.uniform(1,1.5)*teamone[2]
+        elif teamone_coach<=10 and teamone_coach>=5:
+            teamone_worth=random.uniform(0.5,1)*teamone[2]
+        elif teamone_coach<=5 and teamone_coach>=0:
+            teamone_worth=random.uniform(0,0.5)*teamone[2]
+        if teamtwo_coach<=20 and teamtwo_coach>=15:
+            teamtwo_worth=random.uniform(1.5,2)*teamtwo[2]
+        elif teamtwo_coach<=15 and teamtwo_coach>=10:
+            teamtwo_worth=random.uniform(1,1.5)*teamtwo[2]
+        elif teamtwo_coach<=10 and teamtwo_coach>=5:
+            teamtwo_worth=random.uniform(0.5,1)*teamtwo[2]
+        elif teamtwo_coach<=5 and teamtwo_coach>=0:
+            teamtwo_worth=random.uniform(0,0.5)*teamtwo[2]
+        
+        if teamone[1]<=23 and teamone[1]>=15:
+            teamone_power=random.uniform(0,0.5)*teamone_worth
+        elif teamone[1]<15 and teamone[1]>=10:
+            teamone_power=random.uniform(0.5,1)*teamone_worth
+        elif teamone[1]<10 and teamone[1]>=5:
+            teamone_power=random.uniform(1,1.5)*teamone_worth
+        elif teamone[1]<5 and teamone[1]>=0:
+            teamone_power=random.uniform(1.5,2)*teamone_worth
+        if teamtwo[1]<=23 and teamtwo[1]>=15:
+            teamtwo_power=random.uniform(0,0.5)*teamtwo_worth
+        elif teamtwo[1]<15 and teamtwo[1]>=10:
+            teamtwo_power=random.uniform(0.5,1)*teamtwo_worth
+        elif teamtwo[1]<10 and teamtwo[1]>=5:
+            teamtwo_power=random.uniform(1,1.5)*teamtwo_worth
+        elif teamtwo[1]<5 and teamtwo[1]>=0:
+            teamtwo_power=random.uniform(1.5,2)*teamtwo_worth
+        
+        if teamone_power>teamtwo_power:
+            teamone[11]+=1
+            teamtwo[13]+=1
+            teamone[7]+=3
+            teamone[8]+=int(teamone_power//teamtwo_power/100)
+            teamtwo[8]+=int(teamone[8]*0.6/100)
+            teamone[9]+=int(teamone[8]*0.6/100)
+            teamtwo[9]+=int(teamone_power//teamtwo_power/100)
+        elif teamone_power<teamtwo_power:
+            teamone[13]+=1
+            teamtwo[11]+=1
+            teamtwo[7]+=3
+            teamtwo[8]+=int(teamtwo_power//teamone_power/100)
+            teamone[8]+=int(teamtwo[8]*0.6/100)
+            teamone[9]+=int(teamtwo_power//teamone_power/100)
+            teamtwo[9]+=int(teamtwo[8]*0.6/100)
+        elif teamone_power==teamtwo_power:
+            teamone[12]+=1
+            teamtwo[12]+=1
+            teamone[7]+=1
+            teamtwo[7]+=1
+            teamone[8]+=1
+            teamtwo[8]+=1
+            teamone[9]+=1
+            teamtwo[9]+=1
+        teamone[10]=teamone[8]-teamone[9]
+        teamtwo[10]=teamtwo[8]-teamtwo[9]
+        print(f"Score:{teamone[0]}:{int(teamtwo[8]*0.6/100)}",f"{teamtwo[0]}:{int(teamtwo_power//teamone_power/100)}",sep="  ")
+        
+    def highest(highest_goal,highest_agaist_goal):    
+        for i in team_list:
+            if i[8]>highest_goal:
+                highest_goal=i[8]
+                highest_goal_team=i[0]
+            elif i[9]>highest_agaist_goal:
+                highest_agaist_goal=i[9]
+                highest_against_goal_team=i[0]
+        print(f"Highest_Goal:{highest_goal_team},{highest_goal},Highest_Agaist_Goal:{highest_against_goal_team},{highest_agaist_goal}")
+            
+            
+        
+
+
+Football=PremierLeauge(Manchester_City,Arsenal,Chelsea,FC_Liverpool,Manchester_United,
+   Tottenham_Hotspur,Newcastle_United,Aston_Villa,West_Ham_United,
+    Brighton_Hove_Albion,Nottingham_Forest,FC_Brentford,Crystal_Palace,
+        Everton,AFC_Bournemouth,Wolverhampton_Wanderers,Fulham,
+            Burnley,Sheffield_United,Luton_Town)
+
+
+
+
+for i in team_list:
+    team_list.remove(i)
+    for j in team_list:
+        PremierLeauge.Match_of_two_teams(i,j)
+        PremierLeauge.Match_of_two_teams(i,j)
+
+Point_table=[(Manchester_City[0],Manchester_City[7],Manchester_City[8],Manchester_City[9],Manchester_City[10],Manchester_City[11],Manchester_City[12],Manchester_City[13]),
+             (Arsenal[0],Arsenal[7],Arsenal[8],Arsenal[9],Arsenal[10],Arsenal[11],Arsenal[12],Arsenal[13]),
+             (Chelsea[0],Chelsea[7],Chelsea[8],Chelsea[9],Chelsea[10],Chelsea[11],Chelsea[12],Chelsea[13]),
+             (FC_Liverpool[0],FC_Liverpool[7],FC_Liverpool[8],FC_Liverpool[9],FC_Liverpool[10],FC_Liverpool[11],FC_Liverpool[12],FC_Liverpool[13]),
+             (Manchester_United[0],Manchester_United[7],Manchester_United[8],Manchester_United[9],Manchester_United[10],Manchester_United[11],Manchester_United[12],Manchester_United[13]),
+             (Tottenham_Hotspur[0],Tottenham_Hotspur[7],Tottenham_Hotspur[8],Tottenham_Hotspur[9],Tottenham_Hotspur[10],Tottenham_Hotspur[11],Tottenham_Hotspur[12],Tottenham_Hotspur[13]),
+             (Newcastle_United[0],Newcastle_United[7],Newcastle_United[8],Newcastle_United[9],Newcastle_United[10],Newcastle_United[11],Newcastle_United[12],Newcastle_United[13]),
+             (Aston_Villa[0],Aston_Villa[7],Aston_Villa[8],Aston_Villa[9],Aston_Villa[10],Aston_Villa[11],Aston_Villa[12],Aston_Villa[13]),
+             (West_Ham_United[0],West_Ham_United[7],West_Ham_United[8],West_Ham_United[9],West_Ham_United[10],West_Ham_United[11],West_Ham_United[12],West_Ham_United[13]),
+             (Brighton_Hove_Albion[0],Brighton_Hove_Albion[7],Brighton_Hove_Albion[8],Brighton_Hove_Albion[9],Brighton_Hove_Albion[10],Brighton_Hove_Albion[11],Brighton_Hove_Albion[12],Brighton_Hove_Albion[13]),
+             (Nottingham_Forest[0],Nottingham_Forest[7],Nottingham_Forest[8],Nottingham_Forest[9],Nottingham_Forest[10],Nottingham_Forest[11],Nottingham_Forest[12],Nottingham_Forest[13]),
+             (FC_Brentford[0],FC_Brentford[7],FC_Brentford[8],FC_Brentford[9],FC_Brentford[10],FC_Brentford[11],FC_Brentford[12],FC_Brentford[13]),
+             (Crystal_Palace[0],Crystal_Palace[7],Crystal_Palace[8],Crystal_Palace[9],Crystal_Palace[10],Crystal_Palace[11],Crystal_Palace[12],Crystal_Palace[13]),
+             (Everton[0],Everton[7],Everton[8],Everton[9],Everton[10],Everton[11],Everton[12],Everton[13]),
+             (AFC_Bournemouth[0],AFC_Bournemouth[7],AFC_Bournemouth[8],AFC_Bournemouth[9],AFC_Bournemouth[10],AFC_Bournemouth[11],AFC_Bournemouth[12],AFC_Bournemouth[13]),
+             (Wolverhampton_Wanderers[0],Wolverhampton_Wanderers[7],Wolverhampton_Wanderers[8],Wolverhampton_Wanderers[9],Wolverhampton_Wanderers[10],Wolverhampton_Wanderers[11],Wolverhampton_Wanderers[12],Wolverhampton_Wanderers[13]),
+             (Fulham[0],Fulham[7],Fulham[8],Fulham[9],Fulham[10],Fulham[11],Fulham[12],Fulham[13]),
+             (Burnley[0],Burnley[7],Burnley[8],Burnley[9],Burnley[10],Burnley[11],Burnley[12],Burnley[13]),
+             (Sheffield_United[0],Sheffield_United[7],Sheffield_United[8],Sheffield_United[9],Sheffield_United[10],Sheffield_United[11],Sheffield_United[12],Sheffield_United[13]),
+             (Luton_Town[0],Luton_Town[7],Luton_Town[8],Luton_Town[9],Luton_Town[10],Luton_Town[11],Luton_Town[12],Luton_Town[13])]
+
+
+
+
+sorted_table = sorted(Point_table, key=lambda point: point[1], reverse=True)
+for i in sorted_table:
+    print(i[0],"  ",f"Point:{i[1]}","  ",f"Goal:{i[2]}","  ",f"Against Goal:{i[3]}","  ",f"Average:{i[4]}","  ",f"Victory:{i[5]}","  ",f"Tie:{i[6]}","  ",f"Lose:{i[7]}")
+PremierLeauge.highest(0,0)
